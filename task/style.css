@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    background-image: url(https://i.gifer.com/8B7.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    background-color: rgb(15, 1, 1);
+    padding: 20px;
+    display: flex;
+    color: beige;
+    text-align: left;
+    margin-left: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    list-style-type: none;
+}
+.active{
+    text-decoration: underline;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+  
+div{
+    background-color: rgb(211, 35, 35);
+    color: white;
+    width: fit-content;
+    margin-left: 25%;
+    margin-top: 25px;
+    padding: 20px;
+}
+ol.li{
+    list-style-type: disc;
+}
+h1{
+    text-align: center;
+}
+img{
+  width: 130px;
+  height: 100px;
+  position: relative;
+  animation: slideRight 1s ease-out forwards;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+

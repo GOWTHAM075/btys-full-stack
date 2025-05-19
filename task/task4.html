@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 0px;
+      background-color: #f0f8ff;
+    }
+
+    .converter {
+      max-width: 300px;
+      margin: auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    input {
+      padding: 8px;
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: black;
+      background-color: white
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./car.jpg" alt="error" height="100px"
+      width="130px">
+      <h1> TASK</h1>
+
+       <ul>
+      <a href="./index.html">
+        <li >Home </li>
+      </a>
+      <a href="./task1.html">
+        <li>Task-1 </li>
+      </a>
+      <a href="./task2.html">
+        <li>Task-2 </li>
+      </a>
+      <a href="./task3.html">
+        <li>Task-3 </li>
+      </a>
+      <a href="./task4.html">
+        <li class="active">Task-4 </li>
+      </a>
+    </ul>
+  </header>
+  <div>
+    <h1>TASKS-4</h1>
+    <div class="converter">
+        <h2>Fahrenheit to Celsius</h2>
+        <input type="number" id="fahrenheitInput" placeholder="Enter °F">
+        <br>
+        <button onclick="convertTemp()">Convert</button>
+        <div class="result" id="result"></div>
+      </div>
+    
+      <script>
+        function convertTemp() {
+          const fahrenheit = parseFloat(document.getElementById("fahrenheitInput").value);
+              
+          const celsius = (fahrenheit - 32) * 5 / 9;
+          document.getElementById("result").textContent = `${fahrenheit}°F = ${celsius.toFixed(2)}°C`;
+        }
+      </script>
+
+  </div>
+
+</body>
+
+</html>

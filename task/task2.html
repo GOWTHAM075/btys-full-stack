@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="./car.jpg" alt="error" height="100px"
+      width="130px">
+      <h1>TASK</h1>
+
+      <ul>
+      <a href="./index.html">
+        <li >Home </li>
+      </a>
+      <a href="./task1.html">
+        <li >Task-1 </li>
+      </a>
+      <a href="./task2.html">
+        <li class="active">Task-2 </li>
+      </a>
+      <a href="./task3.html">
+        <li>Task-3 </li>
+      </a>
+      <a href="./task4.html">
+        <li>Task-4 </li>
+      </a>
+    </ul>
+  </header>
+  <div>
+    <h1>Stop Watch</h1><br/>
+    <h3 id="time">0</h3>
+  <button onclick="start()" id="Start">Start</button>
+  <button onclick="stop()" id="Stop">Stop</button>
+  <button onclick="restart()" id="Restart">Restart</button>
+</div>
+
+
+
+<script>
+let copy = document.getElementById('time');
+let count = 0;
+let timer = null;
+
+
+function start() {
+  timer = setInterval(() => {
+      count++;
+      copy.innerText = count;
+  }, 500);
+}
+
+
+function stop() {
+  clearInterval(timer);
+  timer = null;
+}
+
+
+function restart() {
+  clearInterval(timer);
+  timer = null;
+  count = 0;
+  copy.innerText = count;
+}
+</script>
+
+
+<style>
+h3{
+  padding-left: 100px;
+  align-items: center;
+}
+div{
+  justify-content: center;
+  margin-left: 250px;
+  background-color: rgb(211, 35, 35);
+  width:max-content;
+  padding :40px;
+  border-radius: 20px;
+  box-shadow: rgba(113, 0, 219, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  font-size: x-large;
+ 
+}
+button{
+  background-color: rgb(1, 16, 16);
+  border-radius: 20px;
+  font-size: x-large;
+  color: white;
+}
+button:hover{
+transform: scale(1.1);
+text-shadow: 0 0 25px var(--main-color);
+}
+</style>
+
+
+</body>
+
+</html>
